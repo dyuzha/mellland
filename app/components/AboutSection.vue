@@ -19,7 +19,7 @@ const features = ref<PageFeatureProps[]>([
 </script>
 
 <template>
-  <div class="p-4 sm:p-6 lg:p-8 basic-gradient" id="about">
+  <div class="md:p-4 sm:p-6 lg:p-8 basic-gradient" id="about">
 
     <UPageSection title="/ Обо мне" orientation="horizontal" class="grain " :ui="{
       title: 'text-secondary md:pb-10',
