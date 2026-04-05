@@ -1,0 +1,25 @@
+# node files
+node_modules
+.output
+dist
+.cache
+
+# More
+.git
+.gitignore
+.gitlab-ci.yml
+README.md
+LICENSE
+.vscode
+.idea
+.env
+.env.*
+!.env.example
+
+# Docker files
+Dockerfile
+docker-compose*.yml
+
+# Nuxt
+.nuxt
+

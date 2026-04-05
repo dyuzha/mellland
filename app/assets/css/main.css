@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  --font-sans: "Playfair Display", system-ui, sans-serif;
+  --font-sans-head: "Stack Sans Headline", system-ui, sans-serif;
+  --font-sans-ui: "Stack Sans Headline", system-ui;
+  --color-secondary: #263747;
+  --basic-gradient: linear-gradient(180deg, #f3edea, #f7f4f2);
+
+  --color-slate-50:  #E9D9C8;
+  --color-slate-100: #E9D9C8;
+  --color-slate-200: #E9D9C8;
+  --color-slate-300: #E9D9C8;
+  --color-slate-400: #E9D9C8;
+  --color-slate-500: #E9D9C8;
+  --color-slate-600: #E9D9C8;
+  --color-slate-700: #E9D9C8;
+  --color-slate-800: #E9D9C8;
+  --color-slate-900: #E9D9C8;
+  --color-slate-950: #E9D9C8;
+
+
+  --color-brand-dark: #65849B;
+  /* --color-brand-light: #efe9e6; */
+  --color-brand-light: #E9D9C8;
+
+  /* Палитра slate */
+  /* --color-slate-50: #65849B; */
+  /* --color-slate-100: #65849B; */
+  /* --color-slate-200: #65849B; */
+  /* --color-slate-300: #65849B; */
+  /* --color-slate-400: #65849B; */
+  /* --color-slate-500: #65849B; */
+  /* --color-slate-600: #65849B; */
+  /* --color-slate-700: #65849B; */
+  /* --color-slate-800: #65849B; */
+  /* --color-slate-900: #65849B; */
+  /* --color-slate-950: #65849B; */
+}
+
+@layer base {
+
+  :root {
+    /* Главный фон приложения. */
+    --ui-bg: var(--color-brand-light);
+    /* Цвет главного действия (кнопки, чекбоксы, активные ссылки). */
+    --ui-primary: var(--color-brand-dark);
+    /* Базовый текст (не самый яркий). */
+    --ui-text-muted: var(--color-brand-dark);
+    /* Яркий текст (заголовки, жирный текст). */
+    --ui-text-highlighted: var(--color-brand-dark);
+    /* Цвет всех рамок и разделителей. */
+    --ui-border: #263747;
+    /* --ui-border: red; */
+
+    /* --color-basic-gradient: linear-gradient(180deg, #f3edea, #f7f4f2); */
+  }
+
+  .dark {
+    /* Главный фон приложения. */
+    --ui-bg: var(--color-brand-dark);
+    /* Цвет главного действия (кнопки, чекбоксы, активные ссылки). */
+    --ui-primary: var(--color-brand-light);
+    /* Базовый текст (не самый яркий). */
+    --ui-text-muted: var(--color-brand-light);
+    /* Яркий текст (заголовки, жирный текст). */
+    --ui-text-highlighted: var(--color-brand-light);
+  }
+
+  html {
+    font-family: var(--font-sans);
+    /* background-color: var(--ui-bg); */
+  }
+}
+
+@layer components {
+
+  .basic-gradient {
+    background: var(--basic-gradient);
+  }
+
+}
+

@@ -1,0 +1,24 @@
+<template>
+
+
+  <UFooter :ui="{ center: 'border-none' }">
+
+    <template #left>
+      <p class="text-sm text-secondary">
+        Built by
+        <a href="https://dyuzha.ru" class="underline hover:text-primary">
+          Matvey Dyuzhev
+        </a>
+        • © {{ new Date().getFullYear() }}
+      </p>
+    </template>
+
+
+    <template #right>
+      <UButton to="https://t.me/dyuzha" target="_blank" icon="i-simple-icons-telegram" aria-label="Nuxt on X"
+        color="secondary" variant="ghost" />
+      <UButton to="https://github.com/dyuzha" target="_blank" icon="i-simple-icons-instagram" aria-label="GitHub"
+        color="secondary" variant="ghost" />
+    </template>
+  </UFooter>
+</template>

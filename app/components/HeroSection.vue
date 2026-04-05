@@ -1,0 +1,27 @@
+<template>
+  <section id="hero">
+    <div class="
+      flex flex-col
+      md:flex-row
+      w-full h-full
+      basic-gradient
+    ">
+
+      <!-- Right column: nav + content -->
+      <div class="w-full md:w-1/2 flex flex-col gap-4 md:order-2 order-1">
+        <Header />
+        <CTA class="flex-1 h-full" />
+
+      <NuxtImg src="/images/main-line.png" alt="Психолог Дарья Сафронова" format="webp" quality="80"
+        class="w-full h-auto mb-20" />
+      </div>
+
+      <!-- Left column: photo -->
+      <div class="w-full md:w-1/2 md:order-1 order-2">
+        <NuxtImg src="/images/hero-photo.jpg" alt="Психолог Дарья Сафронова" format="webp" quality="80"
+          class="w-full h-full object-cover" />
+      </div>
+
+    </div>
+  </section>
+</template>
