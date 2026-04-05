@@ -1,5 +1,5 @@
 <template>
-  <UPageSection title="/ Мое образование"
+  <UPageSection id="education" title="/ Мое образование"
     :ui="{
       title: 'text-left text-secondary'
     }"

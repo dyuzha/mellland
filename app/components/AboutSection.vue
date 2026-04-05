@@ -19,16 +19,16 @@ const features = ref<PageFeatureProps[]>([
 </script>
 
 <template>
-  <div class="p-4 sm:p-6 lg:p-8 bg-blue basic-gradient">
+  <div class="p-4 sm:p-6 lg:p-8 basic-gradient" id="about">
 
-    <UPageSection title="/ Обо мне" orientation="horizontal" class="bg-primary" :ui="{
+    <UPageSection title="/ Обо мне" orientation="horizontal" class="grain " :ui="{
       title: 'text-secondary md:pb-10',
       description: 'text-secondary',
       features: 'md:pb-10 ',
     }">
       <template #features>
 
-        <div class="[&_*]:text-secondary [&_*]:md:text-xl flex flex-col gap-5">
+        <div class="**:text-secondary **:md:text-xl flex flex-col gap-5">
           <UPageFeature
             description="Меня зовут Дарья, я практикующий когнитивно-поведенческий терапевт, член Ассоциации когнитивно-поведенческой психотерапии." />
 
@@ -50,7 +50,8 @@ const features = ref<PageFeatureProps[]>([
                 absolute
                 top-0 left-6
                 text-8xl
-                font-sans-head text-gray-50/40
+                font-sans-head
+                text-gray-50/40
               ">“</span>
           <p class="
               text-xl text-secondary">Психолог временно держит вас за руку, чтобы вы научились идти уверенно сами.</p>

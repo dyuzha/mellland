@@ -1,84 +1,80 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
-@theme {
-  --font-sans: "Playfair Display", system-ui, sans-serif;
-  --font-sans-head: "Stack Sans Headline", system-ui, sans-serif;
-  --font-sans-ui: "Stack Sans Headline", system-ui;
-  --color-secondary: #263747;
-  --basic-gradient: linear-gradient(180deg, #f3edea, #f7f4f2);
+@theme static {
+  --font-sans: 'Public Sans', sans-serif;
 
-  --color-slate-50:  #E9D9C8;
-  --color-slate-100: #E9D9C8;
-  --color-slate-200: #E9D9C8;
-  --color-slate-300: #E9D9C8;
-  --color-slate-400: #E9D9C8;
-  --color-slate-500: #E9D9C8;
-  --color-slate-600: #E9D9C8;
-  --color-slate-700: #E9D9C8;
-  --color-slate-800: #E9D9C8;
-  --color-slate-900: #E9D9C8;
-  --color-slate-950: #E9D9C8;
+  --color-blue-50: #f4f7f9;
+  --color-blue-100: #e6edf2;
+  --color-blue-200: #c7d6e0;
+  --color-blue-300: #a8bfce;
+  --color-blue-400: #86a3b7;
+  --color-blue-500: #65849b; /* base */
+  --color-blue-600: #566f83;
+  --color-blue-700: #465b6b;
+  --color-blue-800: #374753;
+  --color-blue-900: #2b3842;
+  --color-blue-950: #263747; /* darkest */
 
+  --color-pink-50: #fff7f9;
+  --color-pink-100: #ffecef;
+  --color-pink-200: #ffd6df;
+  --color-pink-300: #f3b6c3;
+  --color-pink-400: #e49aa9;
+  --color-pink-500: #d48698; /* soft base */
+  --color-pink-600: #b87485;
+  --color-pink-700: #94606f;
+  --color-pink-800: #74505c;
+  --color-pink-900: #5a404a;
+  --color-pink-950: #3f2c33;
 
-  --color-brand-dark: #65849B;
-  /* --color-brand-light: #efe9e6; */
-  --color-brand-light: #E9D9C8;
-
-  /* Палитра slate */
-  /* --color-slate-50: #65849B; */
-  /* --color-slate-100: #65849B; */
-  /* --color-slate-200: #65849B; */
-  /* --color-slate-300: #65849B; */
-  /* --color-slate-400: #65849B; */
-  /* --color-slate-500: #65849B; */
-  /* --color-slate-600: #65849B; */
-  /* --color-slate-700: #65849B; */
-  /* --color-slate-800: #65849B; */
-  /* --color-slate-900: #65849B; */
-  /* --color-slate-950: #65849B; */
 }
 
-@layer base {
 
   :root {
-    /* Главный фон приложения. */
-    --ui-bg: var(--color-brand-light);
-    /* Цвет главного действия (кнопки, чекбоксы, активные ссылки). */
-    --ui-primary: var(--color-brand-dark);
-    /* Базовый текст (не самый яркий). */
-    --ui-text-muted: var(--color-brand-dark);
-    /* Яркий текст (заголовки, жирный текст). */
-    --ui-text-highlighted: var(--color-brand-dark);
-    /* Цвет всех рамок и разделителей. */
-    --ui-border: #263747;
-    /* --ui-border: red; */
+    --ui-primary: var(--color-blue-500);
+    --ui-secondary: var(--color-blue-950);
+    --ui-bg: var(--color-pink-50);
 
-    /* --color-basic-gradient: linear-gradient(180deg, #f3edea, #f7f4f2); */
+    --ui-primary-hover: var(--color-blue-600);
+    /* --ui-bg-subtle: var(--color-pink-50); */
+
+
+    --ui-accent: var(--color-blue-500);
+    --ui-main: linear-gradient(180deg, #f3edea, #f7f4f2);
   }
 
   .dark {
-    /* Главный фон приложения. */
-    --ui-bg: var(--color-brand-dark);
-    /* Цвет главного действия (кнопки, чекбоксы, активные ссылки). */
-    --ui-primary: var(--color-brand-light);
-    /* Базовый текст (не самый яркий). */
-    --ui-text-muted: var(--color-brand-light);
-    /* Яркий текст (заголовки, жирный текст). */
-    --ui-text-highlighted: var(--color-brand-light);
+    --ui-primary: var(--color-pink-500);
+    --ui-secondary: var(--color-pink-50);
+    --ui-bg: var(--color-blue-950);
+
+    --ui-primary-hover: var(--color-green-300);
+
+    --ui-accent: var(--color-blue-700);
+    /* --ui-main: linear-gradient(180deg, #14181d, #1b2229); */
+    --ui-main: linear-gradient(180deg, #2b3842, #263747);
   }
 
-  html {
-    font-family: var(--font-sans);
-    /* background-color: var(--ui-bg); */
+
+@layer base {
+  html, body {
+    scroll-behavior: smooth;
   }
 }
+
 
 @layer components {
 
   .basic-gradient {
-    background: var(--basic-gradient);
+    background: var(--ui-main);
+  }
+
+  .grain {
+    background-color: var(--ui-accent);
+    background-image: url(
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E"
+    );
   }
 
 }
-

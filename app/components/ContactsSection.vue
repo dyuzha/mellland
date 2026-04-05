@@ -28,6 +28,7 @@ const links = ref<ButtonProps[]>([
 
 <template>
   <UPageSection
+    id="contacts"
     title="/ Мои контакты"
     orientation="horizontal"
     description="Идеальный результат терапии - когда вы забываете, зачем пришли к психологу."

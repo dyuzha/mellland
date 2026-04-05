@@ -6,8 +6,6 @@
       <WorkSection />
       <EducationSection />
       <PriceSection />
-      <PriceSection2 />
-      <PriceSection3 />
       <ContactsSection />
       <Footer />
     </UContainer>
