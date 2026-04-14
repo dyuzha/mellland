@@ -4,7 +4,7 @@ import type { ButtonProps } from '@nuxt/ui'
 const links = ref<ButtonProps[]>([
   {
     label: 'Записаться',
-    variant: 'subtle',
+    variant: 'solid',
     color: 'primary',
     trailingIcon: 'i-lucide-arrow-right',
     href: '#contacts'
@@ -21,6 +21,7 @@ const links = ref<ButtonProps[]>([
   :links="links"
   :ui="{
     wrapper: 'h-full flex flex-col',
+    headline: 'text-xl',
   }" />
 
 </template>

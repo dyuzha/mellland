@@ -3,10 +3,6 @@ import type { NavigationMenuItem } from '@nuxt/ui'
 
 const items = computed<NavigationMenuItem[]>(() => [
   {
-    label: 'Главная',
-    to: '#hero',
-  },
-  {
     label: 'Обо мне',
     to: '#about',
   },
@@ -17,6 +13,10 @@ const items = computed<NavigationMenuItem[]>(() => [
   {
     label: 'Образование',
     to: '#education',
+  },
+  {
+    label: 'Цены',
+    to: '#price',
   },
   {
     label: 'Контакты',

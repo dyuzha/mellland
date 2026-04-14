@@ -3,6 +3,11 @@ export default defineAppConfig({
     colors: {
       // primary: 'blue',
       neutral: 'slate'
+    },
+    pageSection: {
+      slots: {
+        title: 'text-secondary',
+      }
     }
   }
 })

@@ -35,11 +35,10 @@ const links = ref<ButtonProps[]>([
     class="basic-gradient"
     :links="links"
     :ui="{
-      title: 'text-left text-secondary'
     }"
   >
 
-    <NuxtImg src="/images/about-photo.jpg" alt="Психолог Дарья Сафронова" format="webp" quality="80"
+    <NuxtImg src="/images/pazl.jpeg" alt="Психолог Дарья Сафронова" format="webp" quality="80"
       class="w-full h-full object-cover" />
 
 

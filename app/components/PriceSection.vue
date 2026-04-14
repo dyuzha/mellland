@@ -66,7 +66,7 @@ const plans = ref<PricingPlanProps[]>([
 
   <UPageSection id="price" title="/ Цены"
     :ui="{
-      title: 'text-left text-secondary'
+      title: 'text-left'
     }"
     class="basic-gradient"
   >
