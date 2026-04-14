@@ -28,17 +28,17 @@ const links = ref<ButtonProps[]>([
 
 <template>
   <UPageSection
+    id="contacts"
     title="/ Мои контакты"
     orientation="horizontal"
     description="Идеальный результат терапии - когда вы забываете, зачем пришли к психологу."
     class="basic-gradient"
     :links="links"
     :ui="{
-      title: 'text-left text-secondary'
     }"
   >
 
-    <NuxtImg src="/images/about-photo.jpg" alt="Психолог Дарья Сафронова" format="webp" quality="80"
+    <NuxtImg src="/images/pazl.jpeg" alt="Психолог Дарья Сафронова" format="webp" quality="80"
       class="w-full h-full object-cover" />
 
 

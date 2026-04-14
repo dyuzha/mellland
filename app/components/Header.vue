@@ -3,28 +3,33 @@ import type { NavigationMenuItem } from '@nuxt/ui'
 
 const items = computed<NavigationMenuItem[]>(() => [
   {
-    label: 'Главная',
-  },
-  {
     label: 'Обо мне',
+    to: '#about',
   },
   {
     label: 'Услуги',
+    to: '#work',
   },
   {
     label: 'Образование',
+    to: '#education',
+  },
+  {
+    label: 'Цены',
+    to: '#price',
   },
   {
     label: 'Контакты',
+    to: '#contacts',
   }
 ])
 </script>
 
 <template>
   <UHeader
-  mode='drawer'
+  mode='modal'
   :ui="{
-    root: 'bg-transparent backdrop-blur-none border-none static w-full  [&_*]:text-secondary'
+    root: 'bg-transparent backdrop-blur-none border-none static w-full'
   }"
   >
     <template #title>
@@ -52,7 +57,7 @@ const items = computed<NavigationMenuItem[]>(() => [
       hightlight=true
       variant="link"
       class="
-      flex flex-col items-center justify-center h-full text-center [&_*]:text-secondary"
+      flex flex-col items-center justify-center h-full text-center "
       :ui="{
         link: 'text-2xl'
       }"

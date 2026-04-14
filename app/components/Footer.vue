@@ -9,10 +9,10 @@
         <a href="https://dyuzha.ru" class="underline hover:text-primary">
           Matvey Dyuzhev
         </a>
-        • © {{ new Date().getFullYear() }}
       </p>
     </template>
 
+        © {{ new Date().getFullYear() }}
 
     <template #right>
       <UButton to="https://t.me/dyuzha" target="_blank" icon="i-simple-icons-telegram" aria-label="Nuxt on X"

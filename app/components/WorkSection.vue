@@ -4,7 +4,7 @@
     title="/ Запросы, с которыми я работаю"
     class="basic-gradient"
     :ui="{
-      title: 'text-left text-secondary'
+      title: 'text-left'
     }"
     >
 
@@ -21,7 +21,7 @@
           <li v-for="(item, index) in workItems" :key="item.id" class="
               flex
               items-center justify-center text-center
-              border-2 border-primary
+              md:border-3 sm:border-3 border border-primary
               bg-transparent w-full rounded-xl
               p-4
               sm:aspect-square sm:rounded-full sm:text-base sm:p-8
