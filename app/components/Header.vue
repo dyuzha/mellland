@@ -55,11 +55,11 @@ const items = computed<NavigationMenuItem[]>(() => [
       <UNavigationMenu :items="items"
       orientation="vertical"
       hightlight=true
-      variant="link"
+      variant="pill"
       class="
-      flex flex-col items-center justify-center h-full text-center "
+      flex flex-col items-center justify-center h-full text-center"
       :ui="{
-        link: 'text-2xl'
+        link: 'text-2xl, text-toned'
       }"
       />
     </template>

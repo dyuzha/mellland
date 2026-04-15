@@ -16,7 +16,7 @@ const plans = ref<PricingPlanProps[]>([
       label: 'Записаться',
       to: '#contacts',
     },
-    variant: isDark ? 'subtle' : 'outline'
+    variant: isDark ? 'solid' : 'solid'
   },
 
   {
@@ -33,7 +33,7 @@ const plans = ref<PricingPlanProps[]>([
       label: 'Начать менять свою жизнь',
       to: '#contacts',
     },
-    variant: isDark ? 'subtle' : 'outline'
+    variant: isDark ? 'subtle' : 'subtle'
   },
 
   {
@@ -53,7 +53,7 @@ const plans = ref<PricingPlanProps[]>([
       label: 'Начать изменения выгодно',
       to: '#contacts',
     },
-    variant: isDark ? 'subtle' : 'outline'
+    variant: isDark ? 'outline' : 'outline'
   }
 ])
 
@@ -68,6 +68,6 @@ const plans = ref<PricingPlanProps[]>([
     }"
     class="basic-gradient"
   >
-    <UPricingPlans scale :plans="plans" class="font-sans"/>
+    <UPricingPlans scale :plans="plans" class="font-sans2"/>
   </UPageSection>
 </template>

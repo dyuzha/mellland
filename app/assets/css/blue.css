@@ -1,0 +1,54 @@
+@theme static {
+
+  --color-blue-50:  #f4f7f9;
+  --color-blue-100: #e6edf2;
+  --color-blue-200: #c7d6e0;
+  --color-blue-300: #a8bfce;
+  --color-blue-400: #86a3b7;
+  --color-blue-500: #65849b; /* base */
+  --color-blue-600: #566f83;
+  --color-blue-700: #465b6b;
+  --color-blue-800: #374753;
+  --color-blue-900: #2b3842;
+  --color-blue-950: #263747; /* darkest */
+
+
+  --color-pink-50:  #fff7f9;
+  --color-pink-100: #ffecef;
+  --color-pink-200: #ffd6df;
+  --color-pink-300: #f3b6c3;
+  --color-pink-400: #e49aa9;
+  --color-pink-500: #d48698; /* soft base */
+  --color-pink-600: #b87485;
+  --color-pink-700: #94606f;
+  --color-pink-800: #74505c;
+  --color-pink-900: #5a404a;
+  --color-pink-950: #3f2c33;
+
+}
+
+
+:root {
+  --ui-primary: var(--color-blue-500);
+  --ui-secondary: var(--color-blue-950);
+  --ui-bg: var(--color-pink-50);
+
+
+  --ui-primary-hover: var(--color-blue-600);
+  /* --ui-bg-subtle: var(--color-pink-50); */
+
+
+  --ui-accent: var(--ui-primary);
+  --ui-main: linear-gradient(180deg, #f3edea, #f7f4f2);
+}
+
+.dark {
+  --ui-primary: var(--color-pink-500);
+  --ui-secondary: var(--color-pink-50);
+  --ui-bg: var(--color-blue-950);
+
+  --ui-primary-hover: var(--color-green-300);
+
+  --ui-accent: var(--color-blue-700);
+  --ui-main: linear-gradient(180deg, #2b3842, #263747);
+}

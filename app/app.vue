@@ -18,7 +18,7 @@ useHead({
 
   htmlAttrs: {
     lang: 'ru',
-    class: 'light'
+    // class: 'light'
   }
 })
 

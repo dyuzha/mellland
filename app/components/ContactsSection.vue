@@ -11,7 +11,7 @@ const links = ref<ButtonProps[]>([
   },
   {
     label: 'Max',
-    to: 'https://ya.ru',
+    to: 'https://web.max.ru/112086828',
     color: 'secondary',
     variant: 'outline',
     trailingIcon: 'i-lucide-message-circle'

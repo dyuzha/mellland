@@ -1,73 +1,25 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+@import "./sage.css";
+
+/* @import "./blue.css"; */
+/* @import "./peach.css"; */
+
 
 @theme static {
-  --font-sans: 'Public Sans', sans-serif;
-  --font-sans2: 'Playfair Display', system-ui, sans-serif;
+  /* --font-sans: 'Public Sans', sans-serif; */
+  --font-sans: 'Playfair Display', system-ui;
+  /* --font-sans: 'Playfair Display', sans-serif; */
 
-  /* --font-sans-head: "Stack Sans Headline", system-ui, sans-serif; */
-  /* --font-sans-ui: "Stack Sans Headline", system-ui; */
-
-  --color-blue-50: #f4f7f9;
-  --color-blue-100: #e6edf2;
-  --color-blue-200: #c7d6e0;
-  --color-blue-300: #a8bfce;
-  --color-blue-400: #86a3b7;
-  --color-blue-500: #65849b; /* base */
-  --color-blue-600: #566f83;
-  --color-blue-700: #465b6b;
-  --color-blue-800: #374753;
-  --color-blue-900: #2b3842;
-  --color-blue-950: #263747; /* darkest */
-
-
-  --color-pink-50:  #fff7f9;
-  --color-pink-100: #ffecef;
-  --color-pink-200: #ffd6df;
-  --color-pink-300: #f3b6c3;
-  --color-pink-400: #e49aa9;
-  --color-pink-500: #d48698; /* soft base */
-  --color-pink-600: #b87485;
-  --color-pink-700: #94606f;
-  --color-pink-800: #74505c;
-  --color-pink-900: #5a404a;
-  --color-pink-950: #3f2c33;
-
-  --color-sage: #C7C3B0;
-
+  /* --font-sans: "Stack Sans Headline", system-ui, sans-serif; */
+  --font-sans2: "Stack Sans Headline", system-ui;
 }
 
 
-  :root {
-    /* --ui-primary: var(--color-blue-500); */
-    --ui-primary: var(--color-sage);
-
-    --ui-secondary: var(--color-blue-950);
-    --ui-bg: var(--color-pink-50);
-
-    --ui-primary-hover: var(--color-blue-600);
-    /* --ui-bg-subtle: var(--color-pink-50); */
-
-
-    --ui-accent: var(--ui-primary);
-    --ui-main: linear-gradient(180deg, #f3edea, #f7f4f2);
-  }
-
-  .dark {
-    --ui-primary: var(--color-pink-500);
-    --ui-secondary: var(--color-pink-50);
-    --ui-bg: var(--color-blue-950);
-
-    --ui-primary-hover: var(--color-green-300);
-
-    --ui-accent: var(--color-blue-700);
-    /* --ui-main: linear-gradient(180deg, #14181d, #1b2229); */
-    --ui-main: linear-gradient(180deg, #2b3842, #263747);
-  }
-
 
 @layer base {
-  html, body {
+  html,
+  body {
     scroll-behavior: smooth;
     /* font-family: var(--font-sans2); */
   }
@@ -81,10 +33,9 @@
   }
 
   .grain {
-    background-color: var(--ui-accent);
-    background-image: url(
-    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E"
-    );
+    background-color: var(--ui-bg-accented);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E"
+      );
   }
 
 }
