@@ -15,9 +15,7 @@
         © {{ new Date().getFullYear() }}
 
     <template #right>
-      <UButton to="https://t.me/dyuzha" target="_blank" icon="i-simple-icons-telegram" aria-label="Nuxt on X"
-        color="secondary" variant="ghost" />
-      <UButton to="https://github.com/dyuzha" target="_blank" icon="i-simple-icons-instagram" aria-label="GitHub"
+      <UButton to="https://t.me/safronovaya" target="_blank" icon="i-simple-icons-telegram" aria-label="Telegram"
         color="secondary" variant="ghost" />
     </template>
   </UFooter>
