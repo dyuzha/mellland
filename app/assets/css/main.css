@@ -5,6 +5,9 @@
   --font-sans: 'Public Sans', sans-serif;
   --font-sans2: 'Playfair Display', system-ui, sans-serif;
 
+  /* --font-sans-head: "Stack Sans Headline", system-ui, sans-serif; */
+  /* --font-sans-ui: "Stack Sans Headline", system-ui; */
+
   --color-blue-50: #f4f7f9;
   --color-blue-100: #e6edf2;
   --color-blue-200: #c7d6e0;
@@ -16,6 +19,7 @@
   --color-blue-800: #374753;
   --color-blue-900: #2b3842;
   --color-blue-950: #263747; /* darkest */
+
 
   --color-pink-50:  #fff7f9;
   --color-pink-100: #ffecef;
@@ -29,11 +33,15 @@
   --color-pink-900: #5a404a;
   --color-pink-950: #3f2c33;
 
+  --color-sage: #C7C3B0;
+
 }
 
 
   :root {
-    --ui-primary: var(--color-blue-500);
+    /* --ui-primary: var(--color-blue-500); */
+    --ui-primary: var(--color-sage);
+
     --ui-secondary: var(--color-blue-950);
     --ui-bg: var(--color-pink-50);
 
@@ -41,7 +49,7 @@
     /* --ui-bg-subtle: var(--color-pink-50); */
 
 
-    --ui-accent: var(--color-blue-500);
+    --ui-accent: var(--ui-primary);
     --ui-main: linear-gradient(180deg, #f3edea, #f7f4f2);
   }
 

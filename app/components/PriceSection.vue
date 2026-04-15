@@ -7,34 +7,31 @@ const plans = ref<PricingPlanProps[]>([
   {
     title: 'Индивидуальная терапия',
     description: 'Личное пространство для ваших изменений',
-    price: '2980₽',
+    price: '2100₽',
     features: [
       'Конфиденциальность и безопасность',
-      'Индивидуальный подход',
-      'Длительность сессии — 60 минут',
-      'Онлайн или очно',
-      'Запись в удобное время'
+      'Длительность сессии — 60 минут'
     ],
     button: {
       label: 'Записаться',
-      to: '#contancts',
+      to: '#contacts',
     },
     variant: isDark ? 'subtle' : 'outline'
   },
 
   {
-    title: '🎁 Первый шаг',
-    description: 'Знакомство без обязательств',
+    title: 'Начни бесплатно',
+    description: 'Познакомимся и определим ваш запрос',
     price: '1500₽',
-    discount: 'Бесплатно',
+    discount: 'Free',
     scale: true,
     features: [
       'Познакомимся и определим ваш запрос',
-      'Длительность — 30 минут',
+      'Длительность сессии — 30 минут',
     ],
     button: {
       label: 'Начать менять свою жизнь',
-      to: '#contancts',
+      to: '#contacts',
     },
     variant: isDark ? 'subtle' : 'outline'
   },
@@ -42,18 +39,19 @@ const plans = ref<PricingPlanProps[]>([
   {
     title: 'Абонемент на 5 сессий',
     description: 'Системный подход к изменениям',
-    price: '14900₽',
-    discount: '12665₽',
+    price: '10500₽',
+    discount: '8925₽',
     features: [
-      'Экономия 15% от разовых сессий',
-      'Гибкое расписание',
+      'Конфиденциальность и безопасность',
+      'Экономия 15%',
       'Домашние задания между встречами',
       'Поддержка в чате',
+      'Приоритет в расписании',
       'Длительность сессии — 60 минут'
     ],
     button: {
-      label: 'Выбрать абонемент',
-      to: '#contancts',
+      label: 'Начать изменения выгодно',
+      to: '#contacts',
     },
     variant: isDark ? 'subtle' : 'outline'
   }
@@ -64,7 +62,7 @@ const plans = ref<PricingPlanProps[]>([
 
 <template>
 
-  <UPageSection id="price" title="/ Цены"
+  <UPageSection id="price" title="/ Тарифы"
     :ui="{
       title: 'text-left'
     }"

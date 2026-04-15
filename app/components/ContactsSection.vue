@@ -7,7 +7,7 @@ const links = ref<ButtonProps[]>([
     to: 'https://ya.ru',
     color: 'primary',
     variant: 'solid',
-    trailingIcon: 'i-lucide-send-horizontal'
+    trailingIcon: 'i-simple-icons-telegram'
   },
   {
     label: 'Max',
@@ -16,13 +16,13 @@ const links = ref<ButtonProps[]>([
     variant: 'outline',
     trailingIcon: 'i-lucide-message-circle'
   },
-  {
-    label: 'Instagram',
-    to: 'https://ya.ru',
-    color: 'primary',
-    variant: 'soft',
-    trailingIcon: 'i-lucide-camera'
-  },
+  // {
+  //   label: 'Instagram',
+  //   to: 'https://ya.ru',
+  //   color: 'primary',
+  //   variant: 'soft',
+  //   trailingIcon: 'i-lucide-camera'
+  // },
 ])
 </script>
 
@@ -34,8 +34,6 @@ const links = ref<ButtonProps[]>([
     description="Идеальный результат терапии - когда вы забываете, зачем пришли к психологу."
     class="basic-gradient"
     :links="links"
-    :ui="{
-    }"
   >
 
     <NuxtImg src="/images/pazl.jpeg" alt="Психолог Дарья Сафронова" format="webp" quality="80"

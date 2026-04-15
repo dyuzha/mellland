@@ -15,7 +15,7 @@ const items = computed<NavigationMenuItem[]>(() => [
     to: '#education',
   },
   {
-    label: 'Цены',
+    label: 'Тарифы',
     to: '#price',
   },
   {
