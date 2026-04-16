@@ -1,9 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+import svgLoader from 'vite-svg-loader'
 export default defineNuxtConfig({
   modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxt/image'],
 
+
   devtools: {
     enabled: true
+  },
+
+  vite: {
+    plugins: [svgLoader()]
   },
 
 

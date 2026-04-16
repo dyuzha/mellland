@@ -5,14 +5,12 @@ const links = ref<ButtonProps[]>([
   {
     label: 'Telegram',
     to: 'https://ya.ru',
-    color: 'primary',
     variant: 'solid',
     trailingIcon: 'i-simple-icons-telegram'
   },
   {
     label: 'Max',
     to: 'https://web.max.ru/112086828',
-    color: 'secondary',
     variant: 'outline',
     trailingIcon: 'i-lucide-message-circle'
   },

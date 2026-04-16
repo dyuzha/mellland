@@ -16,7 +16,8 @@
     "@nuxt/image": "2.0.0",
     "@nuxt/ui": "^4.6.0",
     "nuxt": "^4.4.2",
-    "tailwindcss": "^4.2.2"
+    "tailwindcss": "^4.2.2",
+    "vite-svg-loader": "^5.1.1"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.15.2",

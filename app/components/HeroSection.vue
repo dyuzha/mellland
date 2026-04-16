@@ -12,10 +12,11 @@
       <div class="w-full md:w-1/2 flex flex-col gap-4 md:order-2 order-1 ">
         <Header />
         <CTA class="flex-1 h-full" />
-
-        <NuxtImg src="/images/main-line.png" alt="Психолог Дарья Сафронова" format="webp" quality="80"
-          class="w-full h-auto mb-20" />
+          <MainLine
+          class="w-full h-auto mb-20 text-primary"
+          />
       </div>
+
 
       <!-- Left column: photo -->
       <div class="w-full mb-8 md:mb-0 md:w-1/2 md:order-1 order-2">
@@ -25,3 +26,8 @@
     </UContainer>
   </section>
 </template>
+
+<script setup lang="ts">
+import MainLine from '~/assets/images/main-line.svg'
+</script>
+

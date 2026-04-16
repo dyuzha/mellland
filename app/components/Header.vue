@@ -59,7 +59,7 @@ const items = computed<NavigationMenuItem[]>(() => [
       class="
       flex flex-col items-center justify-center h-full text-center"
       :ui="{
-        link: 'text-2xl, text-toned'
+        link: 'text-2xl'
       }"
       />
     </template>

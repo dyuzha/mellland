@@ -3,12 +3,12 @@
     <UContainer class="md:py-4 sm:py-6 lg:py-8">
       <UPageSection title="/ Обо мне" orientation="horizontal" class="grain " :ui="{
         title: 'md:pb-10',
-        description: 'text-secondary',
+        // description: 'text-secondary',
         features: 'md:pb-10 ',
       }">
         <template #features>
 
-          <div class="**:text-secondary **:md:text-xl flex flex-col gap-5">
+          <div class="**:text-toned **:md:text-xl flex flex-col gap-5">
             <UPageFeature
               description="Меня зовут Дарья, я практикующий когнитивно-поведенческий терапевт, член Ассоциации когнитивно-поведенческой психотерапии." />
 
@@ -32,7 +32,7 @@
                 text-gray-50/40
               ">“</span>
             <p class="
-              text-xl text-secondary">Психолог временно держит вас за руку, чтобы вы научились идти уверенно сами.</p>
+              text-xl ">Психолог временно держит вас за руку, чтобы вы научились идти уверенно сами.</p>
           </div>
         </template>
 

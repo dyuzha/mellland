@@ -1,12 +1,13 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      // primary: 'blue',
-      neutral: 'slate'
+      primary: 'green',
+      // secondary: 'blue',
+      neutral: 'blue',
     },
     pageSection: {
       slots: {
-        title: 'text-secondary',
+        title: 'font-sans-headers',
       }
     },
 

@@ -8,7 +8,7 @@
     }"
     >
 
-      <div class="flex items-center gap-8 @container text-secondary">
+      <div class="flex items-center gap-8 @container">
         <!-- Сетка -->
         <ul class="
             grid mx-auto min-w-0 w-full
