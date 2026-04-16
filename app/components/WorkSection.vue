@@ -2,7 +2,7 @@
     <UPageSection
     id="work"
     title="/ Запросы, с которыми я работаю"
-    class="basic-gradient"
+    class=""
     :ui="{
       title: 'text-left'
     }"

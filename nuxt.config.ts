@@ -4,6 +4,30 @@ import svgLoader from 'vite-svg-loader'
 export default defineNuxtConfig({
   modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxt/image'],
 
+  colorMode: {
+    preference: 'light', // или 'dark'
+    fallback: 'light'
+  },
+
+  app: {
+    head: {
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/svg+xml',
+          href: '/favicon-light.svg',
+          media: '(prefers-color-scheme: light)'
+        },
+        {
+          rel: 'icon',
+          type: 'image/svg+xml',
+          href: '/favicon-dark.svg',
+          media: '(prefers-color-scheme: dark)'
+        }
+      ]
+    }
+  },
+
 
   devtools: {
     enabled: true

@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import type { PricingPlanProps } from '@nuxt/ui'
 
-const isDark = useColorMode().value === 'dark'
+const colorMode = useColorMode()
+const isDark = computed(() => colorMode.value === 'dark')
 
-const plans = ref<PricingPlanProps[]>([
+
+const plans = computed<PricingPlanProps[]>(() => [
   {
     title: 'Индивидуальная терапия',
     description: 'Личное пространство для ваших изменений',
@@ -16,7 +18,7 @@ const plans = ref<PricingPlanProps[]>([
       label: 'Записаться',
       to: '#contacts',
     },
-    variant: isDark ? 'solid' : 'solid'
+    variant: isDark.value ? 'solid' : 'outline',
   },
 
   {
@@ -33,7 +35,7 @@ const plans = ref<PricingPlanProps[]>([
       label: 'Начать менять свою жизнь',
       to: '#contacts',
     },
-    variant: isDark ? 'subtle' : 'subtle'
+    variant: isDark.value ? 'solid' : 'outline',
   },
 
   {
@@ -53,7 +55,7 @@ const plans = ref<PricingPlanProps[]>([
       label: 'Начать изменения выгодно',
       to: '#contacts',
     },
-    variant: isDark ? 'outline' : 'outline'
+    variant: isDark.value ? 'solid' : 'outline',
   }
 ])
 
@@ -66,7 +68,7 @@ const plans = ref<PricingPlanProps[]>([
     :ui="{
       title: 'text-left'
     }"
-    class="basic-gradient"
+    class="bg-slate-600/20 dark:bg-elevated/80"
   >
     <UPricingPlans scale :plans="plans" class="font-sans2"/>
   </UPageSection>

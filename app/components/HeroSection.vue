@@ -1,6 +1,7 @@
 <template>
   <section id="hero" class="">
     <UContainer class="
+      p-0
       flex flex-col
       md:flex-row
       w-full h-full
@@ -13,7 +14,8 @@
         <Header />
         <CTA class="flex-1 h-full" />
           <MainLine
-          class="w-full h-auto mb-20 text-primary"
+          class="w-full h-auto mb-20 text-primary stroke-3"
+          ref="Линия жизни"
           />
       </div>
 

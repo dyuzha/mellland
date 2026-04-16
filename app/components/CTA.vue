@@ -20,7 +20,9 @@ const links = ref<ButtonProps[]>([
   :links="links"
   :ui="{
     wrapper: 'h-full flex flex-col',
-    headline: 'text-xl',
+    headline: 'text-2xl',
+    title: 'text-4xl',
+    description: 'text-3xl',
   }" />
 
 </template>

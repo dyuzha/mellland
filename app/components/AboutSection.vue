@@ -1,7 +1,7 @@
 <template>
-  <section class="basic-gradient" id="about">
-    <UContainer class="md:py-4 sm:py-6 lg:py-8">
-      <UPageSection title="/ Обо мне" orientation="horizontal" class="grain " :ui="{
+  <section class="basic-gradient max-h-full" id="about">
+    <UContainer class="p-0 md:py-4 sm:py-6 lg:py-8">
+      <UPageSection title="/ Обо мне" orientation="horizontal" class="grain-accented" :ui="{
         title: 'md:pb-10',
         // description: 'text-secondary',
         features: 'md:pb-10 ',
@@ -29,10 +29,10 @@
                 top-0 left-6
                 text-8xl
                 font-sans-head
-                text-gray-50/40
+                text-dimmed
               ">“</span>
             <p class="
-              text-xl ">Психолог временно держит вас за руку, чтобы вы научились идти уверенно сами.</p>
+              text-xl text-toned ">Психолог временно держит вас за руку, чтобы вы научились идти уверенно сами.</p>
           </div>
         </template>
 

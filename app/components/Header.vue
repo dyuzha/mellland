@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from '@nuxt/ui'
 
+import Logo from '~/assets/images/logo.svg'
+
 const items = computed<NavigationMenuItem[]>(() => [
   {
     label: 'Обо мне',
@@ -33,15 +35,7 @@ const items = computed<NavigationMenuItem[]>(() => [
   }"
   >
     <template #title>
-      <NuxtImg
-        src="/images/logo.png"
-        ref="projectImage"
-        format="webp"
-        quality="80"
-        class="h-6 mx-6"
-
-
-        />
+      <Logo class="h-6 w-6 mx-6 text-highlighted dark:text-primary" ref="Дарья Сафронова" />
     </template>
 
     <UNavigationMenu :items="items" />
@@ -56,8 +50,7 @@ const items = computed<NavigationMenuItem[]>(() => [
       orientation="vertical"
       hightlight=true
       variant="pill"
-      class="
-      flex flex-col items-center justify-center h-full text-center"
+      class="flex flex-col items-center justify-center h-full text-center"
       :ui="{
         link: 'text-2xl'
       }"

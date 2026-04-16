@@ -75,8 +75,8 @@
   /**/
   /* --ui-bg-muted: var(--color-sage-200); */
   /* --ui-bg-elevated: var(--color-blue-200); */
-  /* --ui-bg-accented: var(--color-sage-500); */
-  /* --ui-bg-inverted: var(--color-sage-900); */
+  --ui-bg-accented: var(--color-secondary-500);
+  /* --ui-bg-inverted: var(--color-primary-300); */
   /**/
   /* --ui-border: var(--color-sage-200); */
 
@@ -107,8 +107,8 @@
 
   /* --ui-bg-muted: var(--color-sage-950); */
   /* --ui-bg-elevated: var(--color-blue-600); */
-  /* --ui-bg-accented: var(--color-sage-700); */
-  /* --ui-bg-inverted: var(--color-sage-50); */
+  --ui-bg-accented: var(--color-secondary-700);
+  /* --ui-bg-inverted: var(--color-primary-500); */
   /**/
   /* --ui-border: var(--color-sage-900); */
   /* --ui-border-muted: var(--color-sage-800); */
