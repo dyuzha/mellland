@@ -23,7 +23,6 @@ const plans = computed<PricingPlanProps[]>(() => [
 
   {
     title: 'Начни бесплатно',
-    description: 'Познакомимся и определим ваш запрос',
     price: '1500₽',
     discount: 'Free',
     scale: true,
