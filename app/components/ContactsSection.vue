@@ -12,7 +12,7 @@ const links = ref<ButtonProps[]>([
   },
   {
     label: 'Max',
-    to: 'https://web.max.ru/112086828',
+    to: 'https://max.ru/112086828',
     variant: 'outline',
     trailingIcon: 'i-lucide-message-circle'
   },
