@@ -16,6 +16,11 @@ const features = ref<PageFeatureProps[]>([
     title: 'Ассоциация когнитивно-поведенческой психотерапии (АКПП)',
     description: 'Повышение квалификации по программе «Когнитивно-поведенческая терапия»',
     icon: 'i-lucide-university',
+  },
+  {
+    title: 'Московский институт психоанализа',
+    description: 'Слушатель программы профессиональной переподготовки по направлению «Психология зависимого поведения»',
+    icon: 'i-lucide-book-open',
   }
 ])
 </script>
@@ -31,7 +36,7 @@ const features = ref<PageFeatureProps[]>([
       features: 'md:gap-5',
     }">
 
-    <NuxtImg src="/images/education.jpeg" alt="Психолог Дарья Сафронова" format="webp" quality="80"
+    <NuxtImg src="/images/education.png" alt="Психолог Дарья Сафронова" format="webp" quality="80"
       class="w-full h-full object-cover" />
   </UPageSection>
 </template>

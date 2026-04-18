@@ -47,7 +47,6 @@ const plans = computed<PricingPlanProps[]>(() => [
       'Конфиденциальность и безопасность',
       'Экономия 15%',
       'Домашние задания между встречами',
-      'Поддержка в чате',
       'Приоритет в расписании',
       'Длительность сессии — 60 минут'
     ],
@@ -64,7 +63,7 @@ const plans = computed<PricingPlanProps[]>(() => [
 
 <template>
 
-  <UPageSection id="price" title="/ Тарифы"
+  <UPageSection id="price" title="/ Форматы консультаций"
     :ui="{
       title: 'text-left'
     }"

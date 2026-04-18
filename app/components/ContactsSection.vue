@@ -4,7 +4,7 @@ import type { PageFeatureProps, ButtonProps } from '@nuxt/ui'
 const links = ref<ButtonProps[]>([
   {
     label: 'Telegram',
-    to: 'https://ya.ru',
+    to: 'https://t.me/safronovaya',
     variant: 'solid',
     trailingIcon: 'i-simple-icons-telegram'
   },
