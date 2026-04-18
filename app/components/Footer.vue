@@ -17,7 +17,7 @@
     <template #right>
       <UButton to="https://t.me/safronovaya" target="_blank" icon="i-simple-icons-telegram" aria-label="Telegram"
         variant="ghost" />
-      <UButton to="https://max.ru/112086828" target="_blank" icon="i-lucide-message-circle" aria-label="Telegram"
+      <UButton to="https://max.ru/u/f9LHodD0cOIuT-KHYMWYUDXnTB_3UEyenptnv5HmCJQbjibH6GjkNg1LSEc" target="_blank" icon="i-lucide-message-circle" aria-label="Telegram"
         variant="ghost" />
     </template>
   </UFooter>
