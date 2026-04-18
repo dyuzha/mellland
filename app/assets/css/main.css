@@ -13,6 +13,18 @@
 
   /* --font-sans: "Stack Sans Headline", system-ui, sans-serif; */
   --font-sans2: "Stack Sans Headline", system-ui;
+
+  --color-hand-50:  #FCF9F5;
+  --color-hand-100: #F9F3EA;
+  --color-hand-200: #F5E9DA;
+  --color-hand-300: #F0DEC9;
+  --color-hand-400: #EAD1B6;
+  --color-hand-500: #F2DDC4;
+  --color-hand-600: #D9C4AB;
+  --color-hand-700: #BFA891;
+  --color-hand-800: #A48D77;
+  --color-hand-900: #89725E;
+
 }
 
 

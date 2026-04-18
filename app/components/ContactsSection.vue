@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { PageFeatureProps, ButtonProps } from '@nuxt/ui'
 
+import Hands from '~/assets/images/hands.svg'
+
 const links = ref<ButtonProps[]>([
   {
     label: 'Telegram',
@@ -34,9 +36,34 @@ const links = ref<ButtonProps[]>([
     :links="links"
   >
 
-    <NuxtImg src="/images/pazl.jpeg" alt="Психолог Дарья Сафронова" format="webp" quality="80"
-      class="w-full h-full object-cover" />
+
+   <Hands class="w-full" ref="Дарья Сафронова" />
 
 
   </UPageSection>
 </template>
+
+<style scoped>
+
+:deep(svg .fill-right-puzzle) {
+  fill: var(--color-secondary);
+}
+
+:deep(svg .fill-left-puzzle) {
+  fill: var(--color-primary);
+}
+
+:deep(svg .fill-main) {
+  fill: var(--color-hand-500);
+}
+
+:deep(svg .fill-dark) {
+  fill: var(--color-hand-800);
+}
+
+:deep(svg .fill-light) {
+  fill: var(--color-hand-300);
+}
+
+
+</style>
