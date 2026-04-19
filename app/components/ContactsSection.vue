@@ -62,7 +62,7 @@ const links = ref<ButtonProps[]>([
 }
 
 :deep(svg .fill-light) {
-  fill: var(--color-hand-300);
+  fill: var(--color-hand-100);
 }
 
 

@@ -22,7 +22,7 @@
 
       <!-- Left column: photo -->
       <div class="w-full mb-8 md:mb-0 md:w-1/2 md:order-1 order-2">
-        <NuxtImg src="/images/hero-photo.jpg" alt="Психолог Дарья Сафронова" format="webp" quality="80"
+        <NuxtImg src="/images/hero-photo.jpeg" alt="Психолог Дарья Сафронова" format="webp" quality="80"
           class="w-full h-full object-cover" />
       </div>
     </UContainer>
