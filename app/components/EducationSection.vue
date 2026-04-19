@@ -50,12 +50,14 @@ const features = ref<PageFeatureProps[]>([
   fill: var(--color-primary);
 }
 
-:deep(svg .stroke-puzzles) {
-  stroke: var(--color-primary);
+:deep(.stroke-puzzles) {
+  stroke: var(--color-primary-700);
 }
 
-:deep(svg .dark .stroke-puzzles) {
-  stroke: var(--color-secondary-900);
+.dark {
+  :deep(.stroke-puzzles) {
+    stroke: var(--color-secondary-900);
+  }
 }
 
 :deep(svg .stroke-man) {

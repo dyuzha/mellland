@@ -3,7 +3,6 @@
     <UContainer class="p-0 md:py-4 sm:py-6 lg:py-8">
       <UPageSection title="/ Обо мне" orientation="horizontal" class="grain-accented" :ui="{
         title: 'md:pb-10',
-        // description: 'text-secondary',
         features: 'md:pb-10 ',
       }">
         <template #features>

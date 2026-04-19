@@ -46,11 +46,11 @@ const links = ref<ButtonProps[]>([
 <style scoped>
 
 :deep(svg .fill-right-puzzle) {
-  fill: var(--color-secondary);
+  fill: var(--color-primary);
 }
 
 :deep(svg .fill-left-puzzle) {
-  fill: var(--color-primary);
+  fill: var(--color-secondary);
 }
 
 :deep(svg .fill-main) {
@@ -62,7 +62,7 @@ const links = ref<ButtonProps[]>([
 }
 
 :deep(svg .fill-light) {
-  fill: var(--color-hand-100);
+  fill: var(--color-hand-200);
 }
 
 
