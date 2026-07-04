@@ -29,6 +29,10 @@ export default defineNuxtConfig({
   },
 
 
+  fonts: {
+    provider: 'google'
+  },
+
   devtools: {
     enabled: true
   },
