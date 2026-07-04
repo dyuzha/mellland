@@ -1,17 +1,38 @@
+workflow:
+  rules:
+    - if: '$CI_COMMIT_TAG'
+    - if: '$CI_COMMIT_BRANCH == "main"'
+    - when: never
+
 variables:
   IMAGE_TAG_SHA: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA
   IMAGE_TAG_COMMIT: $CI_REGISTRY_IMAGE:$CI_COMMIT_TAG
-  IMAGE_TAG_LATEST: $CI_REGISTRY_IMAGE:latest
-
 
 stages:
+  - validate
   - build
   - tag
-  - deploy
+
+
+validate_tag:
+  stage: validate
+  script:
+    - echo "$CI_COMMIT_TAG" | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$'
+  rules:
+    - if: $CI_COMMIT_TAG
+    - when: never
 
 
 build_image:
   stage: build
+  image: docker:28
+  services:
+    - name: docker:28-dind
+      command: ["--tls=false"]
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+
   script:
     - echo "$CI_REGISTRY_PASSWORD" | docker login -u "$CI_REGISTRY_USER" --password-stdin "$CI_REGISTRY"
 
@@ -30,7 +51,14 @@ build_image:
 
 tag_release:
   stage: tag
-  needs: [build_image]
+  image: docker:28
+  services:
+    - name: docker:28-dind
+      command: ["--tls=false"]
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+  needs: [validate_tag, build_image]
   script:
     - echo "$CI_REGISTRY_PASSWORD" | docker login -u "$CI_REGISTRY_USER" --password-stdin "$CI_REGISTRY"
 
@@ -41,96 +69,3 @@ tag_release:
   rules:
     - if: $CI_COMMIT_TAG
 
-
-tag_latest:
-  stage: tag
-  needs: [build_image]
-  script:
-    - echo "$CI_REGISTRY_PASSWORD" | docker login -u "$CI_REGISTRY_USER" --password-stdin "$CI_REGISTRY"
-
-    - docker pull "$IMAGE_TAG_SHA"
-    - docker tag "$IMAGE_TAG_SHA" "$IMAGE_TAG_LATEST"
-    - docker push "$IMAGE_TAG_LATEST"
-
-  rules:
-    - if: '$CI_COMMIT_BRANCH == "main"'
-
-
-
-.deploy_template:
-  stage: deploy
-  script:
-    - |
-      ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST << EOF
-      set -e
-
-      echo "$CI_REGISTRY_PASSWORD" | docker login -u "$CI_REGISTRY_USER" --password-stdin "$CI_REGISTRY"
-
-      cd "$APP_DIR"
-
-      export IMAGE="$CI_REGISTRY_IMAGE"
-      export VERSION="$DEPLOY_VERSION"
-
-      echo "Deploying $IMAGE:$VERSION"
-
-      docker compose pull
-      docker compose up -d
-
-      docker compose ps
-      EOF
-
-
-deploy_stage:
-  extends: .deploy_template
-  environment:
-    name: stage
-    url: https://...
-  variables:
-    DEPLOY_HOST: $STAGE_HOST
-    DEPLOY_USER: $STAGE_USER
-    DEPLOY_VERSION: $CI_COMMIT_SHORT_SHA
-  rules:
-    - if: '$CI_COMMIT_BRANCH == "stage"'
-
-
-deploy_prod:
-  extends: .deploy_template
-  environment:
-    name: prod
-    url: https://...
-  variables:
-    DEPLOY_HOST: $PROD_HOST
-    DEPLOY_USER: $PROD_USER
-    DEPLOY_VERSION: $CI_COMMIT_TAG
-  rules:
-    - if: $CI_COMMIT_TAG
-  when: manual
-
-
-rollback_prod:
-  stage: deploy
-  environment:
-    name: prod
-  script:
-    - |
-      ssh -o StrictHostKeyChecking=no $PROD_USER@$PROD_HOST << 'EOF'
-      set -e
-
-      cd "$APP_DIR"
-
-      echo "Available images:"
-      docker images $CI_REGISTRY_IMAGE
-
-      echo "Enter version to rollback:"
-      read VERSION
-
-      export IMAGE="$CI_REGISTRY_IMAGE"
-      export VERSION="$VERSION"
-
-      docker compose up -d
-
-      docker compose ps
-      EOF
-  rules:
-    - if: $CI_COMMIT_TAG
-      when: manual
