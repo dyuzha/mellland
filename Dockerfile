@@ -1,39 +1,31 @@
 # == BASE: Общая среда
-FROM node:22-alpine AS base
+FROM node:22-bookworm-slim AS base
 WORKDIR /app
+RUN corepack enable && corepack prepare pnpm@10.29.2 --activate
 
 # == Deps: Только установка пакетов
 FROM base AS deps
-COPY package*.json ./
-RUN npm ci
-
-# Ci для более быстрой и точной установки в отличии от install
-# - не меняет package-lock.json
-# - быстрее
-
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends python3 make g++ \
+  && rm -rf /var/lib/apt/lists/*
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+RUN pnpm install --frozen-lockfile
 
 # == BUILDER: Сборка приложения
 FROM base AS builder
+ENV NODE_OPTIONS="--max-old-space-size=4096"
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-RUN npm run build
-
-# Формируем финальный ./.output
-
+RUN pnpm run build
 
 # == PRODUCTION: Финальный образ
-FROM node:22-alpine AS runner
+FROM node:22-bookworm-slim AS runner
 WORKDIR /app
 COPY --from=builder /app/.output ./.output
-# COPY --from=builder /app/package*.json ./
-# COPY --from=builder /app/content ./content
 
 # Настройка окружения
 ENV NODE_ENV=production
 ENV PORT=3000
-
-# Скорей всего не нужно
-# RUN npm install --omit=dev
 
 EXPOSE 3000
 
